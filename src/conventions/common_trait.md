@@ -162,14 +162,19 @@ traits นี้แสดงถึงไอเทม ที่สามารถ
 
 > นี้ trait ใช้ [เครื่องหมายสแลช](#เครื่องหมายสแลช)!
 
-traits นี้แสดงถึงไอเทมที่เป็น "เพชรพลอย"
+traits นี้แสดงถึงไอเทมที่มีโครงสร้างเป็นผลึก
 
 |Trait|คำอธิบาย|
 |-----|-----------|
-|gem/diamond|Diamond gemstone|
-|gem/ruby|Ruby gemstone|
-|gem/emerald|Emerald gemstone|
-|gem/saphire|Saphire gemstone|
+|gem/diamond|อัญมณี เพชร|
+|gem/ruby|อัญมณี ทับทิม|
+|gem/emerald|อัญมณี มรกต|
+|gem/sapphire|อัญมณี แซฟไฟร์ (ไพลิน)|
+|gem/prismarine|พริสมารีน|
+|gem/lapis|อัญมณี ลาพิส ลาซูลี|
+|gem/obsidian|วัสดุ ออฟซิเดี้ยน ใดๆl|
+|gem/quartz|วัสดุ ควอตซ์ ใดๆ|
+|gem/opal|อัญมณ๊ โอปอล|
 
 ### กลุ่มย่อยของโลหะ
 
