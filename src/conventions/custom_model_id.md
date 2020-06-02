@@ -1,25 +1,25 @@
-# Custom Model ID
+# Custom Model ID (ไอดีโมเดลกำหนดเอง)
 
-## About
+## คืออะไร
 
-This convention aims to reduce conflict within the [custom model data](https://minecraft.gamepedia.com/Model#Item_tags) system as much as possible by assigning a unique id for every creator to use.
+ข้อนี้มีวัตถุประสงค์เพื่อลดการตีกันภายในระบบ [custom model data](https://minecraft.gamepedia.com/Model#Item_tags) ให้มากที่สุดโดยกำหนดรหัสเฉพาะสำหรับผู้สร้างดาต้าแพคทุกคนที่ใช้ Resource packs
 
-## 1. Register your id
+## 1. ลงทะเบียนไอดีของคุณ
 
-"id" is an integer between 1-999 which we'll use to uniquely namespaced custom model data to prevent conflict between [resourcepacks](https://minecraft.gamepedia.com/Resource_pack).
+"id" คือเลขจำนวนเต็ม (Integer) ระหว่าง 1-999 ซึ่งเราจะใช้ namespaced custom model data เฉพาะเจาะจง เพื่อป้องกันการตีกันของ Resource packs  [resourcepacks](https://minecraft.gamepedia.com/Resource_pack).
 
-You can register your id at [https://mc-datapacks.web.app](https://mc-datapacks.web.app/custom_model_id).
-> Do note that any id above 700 is susceptible to floating-point precision error.
+คุณสามารถลงทะเบียนไอดีของคุณได้ที่นี่ [https://mc-datapacks.web.app](https://mc-datapacks.web.app/custom_model_id).
+> !โปรดทราบว่าไอดีใดๆที่สูงกว่า 700 มีความไวต่อบัคทำให้ความแม่นยำลดลง
 
-## 2. Prefix your model with your id
+## 2. ใส่เลขด้านหน้าเลขโมเดลของคุณด้วยไอดีของคุณ
 
-You will prefix your custom model data with your id in this format where `XXX` is your ID and `0000` is any custom model data that fits within 4 digits.
+คุณต้องใส่เลขไอดีของคุณไว้ด้านหน้าเลขโมเดลของคุณในรูปแบบดังกล่าว ซึ่ง `XXX` เป็น ไอดีของคุณ และ `0000` เป็น custom model data เลขอะไรก็ได้ สูงสุดเต็มที่ 4 หลัก
 
 |id|cmd|
 |---|----|
 |XXX|0000|
 
-Here are some examples:
+และนี่คือตัวอย่าง:
 
 ### 2.1. id = 42
 

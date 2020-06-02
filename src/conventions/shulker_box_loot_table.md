@@ -1,12 +1,12 @@
-# Shulker Box Loot Table Convention
+# Shulker Box Loot Table แบบแผน
 
-## About
+## คืออะไร
 
-This convention aims to make [Shulker Box Inventory Manipulation](../tips/shulker_box_inventory_manipulation.md) as conflicted-free as possible by enforcing a specific loot table for `minecraft:yellow_shulker_box` block.
+แบบแผนนี้มีวัตถุประสงค์เพื่อสร้างระบบ [จัดการช่องเก็บของของผู่เล่นด้วย Shulker Box](../tips/shulker_box_inventory_manipulation.md) เพื่อไม่ให้เกิดการชนกันภายในระบบ โดยการบังคับใช้ loot table สำหรับบล็อก `minecraft:yellow_shulker_box` โดยเฉพาะ
 
-## Implementation
+## โดยปฏิบัติดังต่อไปนี้
 
-Simply use this loot table inside `/data/minecraft/loot_tables/blocks/yellow_shulker_box.json` when you want to use the [Inventory Manipulation](../tips/shulker_box_inventory_manipulation.md) trick.
+เพียงแค่สร้าง loot table ที่ `/data/minecraft/loot_tables/blocks/yellow_shulker_box.json` เมื่อคุณต้องการใช้เคล็ดลับการ [จัดการช่องเก็บของของผู้เล่น](../tips/shulker_box_inventory_manipulation.md) 
 
 ```json
 {
@@ -78,6 +78,6 @@ Simply use this loot table inside `/data/minecraft/loot_tables/blocks/yellow_shu
 }
 ```
 
-## Reference
+## อ้างอิง
 
-- [Shulker Box Inventory Manipulation](../tips/shulker_box_inventory_manipulation.md)
+- [จัดการช่องเก็บของของผู่เล่นด้วย Shulker Box](../tips/shulker_box_inventory_manipulation.md)

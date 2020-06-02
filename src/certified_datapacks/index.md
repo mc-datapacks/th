@@ -1,11 +1,11 @@
-# Certified Datapacks
+# ดาต้าแพคผ่านการรับรอง
 
-![Certified Datapack Banner](https://i.imgur.com/NbVuvwA.png)
+![แบนเนอร์ดาต้าแพคผ่านการรับรอง](https://i.imgur.com/NbVuvwA.png)
 
 ```text
 https://i.imgur.com/NbVuvwA.png
 ```
 
-You can attach this banner to your project page after your datapack has been verified as a Certified Datapack.
+คุณสามารถแนบแบนเนอร์ที่หน้าเว็บโพสต์ของคุณหลังจากที่ดาต้าแพคของคุณได้รับการตรวจสอบแล้วว่าเป็นดาต้าแพคผ่านการรับรอง
 
-> Certified Datapacks have a benefit of knowing that your datapack will be compatible with other datapacks.
+> ดาต้าแพคผ่านการรับรองนั้นมีประโยชน์เพราะมันทำให้ทราบว่าดาต้าแพคนี้สามารถใช้งานร่วมกันได้หรือเข้ากันได้โดยไม่เกิดปัญหากับดาต้าแพคอื่นๆ

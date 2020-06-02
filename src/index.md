@@ -1,29 +1,29 @@
-# About
+# เกี่ยวกับ
 
-Minecraft Datapacks is a community-driven minecraft server about datapacks. This means we need a way to ensure compatibility between many datapacks to create a stable and friendly datapack ecosystem.
+Minecraft Datapacks TH คือคอมมูนิตี้ไมน์คราฟต์เซิร์ฟเวอร์ที่เดินหน้าเกี่ยวกับดาต้าแพค ซึ่งหมายถึงเราต้องการวิธีการตรวจสอบความเข้ากันได้ระหว่างดาต้าแพคจำนวนมากเพื่อสร้างการใช้ระบบดาต้าแพคที่เสถียรและเป็นมิตรมีประสิทธิภาพกับผู้ใช้
 
-[Discord](https://discord.gg/SnJQcfq)
+[Discord](https://discord.gg/KgbVpmz)
 
-## How we are going to do it
+## เราทำมันยังไง
 
-To achieve this we will use the "programming conventions" method, which we will kindly ask other users to follow to improve compatibility between datapacks. And to do that we need to create a way for users to be able to access these conventions very quickly. and that is the aim of this website.
+เพื่อให้สิ่งนี้สำเร็จได้เราใช้วิธี "ระเบียบการเขียนโปรแกรม" เราได้ขอให้ผู้เขียนดาต้าแพครายอื่นๆปฎิบัติตามเพื่อปรับปรุงความเข้ากันได้ระหว่างดาต้าแพค และในการทำเช่นนั้นเราต้องสร้างวิธีการเขียนที่ควรจะเป็นเพื่อให้สามารถเข้าถึงแบบแผนเหล่านี้ได้อย่างรวดเร็ว และนั่นคือวัตถุประสงค์ของเว็บไซต์นี้
 
-## Contribution
+## ส่วนช่วยเหลือ
 
-If you wish to contribute to this project you can do it via [this Github repository](https://github.com/mc-datapacks)
+หากคุณต้องการมีส่วนร่วมในโครงการนี้คุณสามารถทำได้ผ่าน [ Github repository](https://github.com/mc-datapacks) นี้
 
-As of right now, there are 3 types of contribution **Grammar Contribution**, **Tips Contribution** and **Convention Contribution**
+ณ ตอนนี้มีการสนับสนุน 3 ประเภท **ส่วนช่วยเหลือไวยากรณ์**, **ส่วนช่วยเหลือเคล็ดลับ** and **ส่วนช่วยเหลือแบบแผน**
 
-1. **Grammar Contribution** is a simple grammar correction pull-request, anyone can make this contribution if they notice grammar errors.
-2. **Tips Contribution** is a contribution to a "tips" section of this repository, similar to **Grammar Contribution** you just need to make a pull-request and wait for approval.
-3. **Convention Contribution** is a contribution to the "conventions" section of this repository, to contribute this please read the next section.
+1. **ส่วนช่วยเหลือไวยากรณ์** คือการเรียกขอแก้ไขไวยากรณ์อย่างง่ายๆใครๆ ก็สามารถทำสิ่งนี้ได้ถ้าหากพวกเขาสังเกตเห็นความผิดพลาดทางไวยากรณ์
+2. **ส่วนช่วยเหลือเคล็ดลับ** ในส่วนการช่วยเหลือ "เคล็ดลับ" ในการเก็บหัวข้อรวบร่วมข้อมูลจะคล้ายๆกับ **ส่วนช่วยเหลือไวยากรณ์** คุณแค่ต้องยื่นเรียกคำขอและรอการอนุมัติ
+3. **ส่วนช่วยเหลือแบบแผน** คือส่วนช่วยเหลือของ "แบบแผน" ในการเก็บหัวข้อรวบร่วมข้อมูลเพื่อช่วยเหลือส่วนนี้โปรดอ่านหัวข้อถัดไป
 
-### Convention Contribution
+### ส่วนช่วยเหลือแบบแผน
 
-To contribute to this you must first create an issue with the `Convention Suggestion` label in this format:
+หากต้องการช่วยเหลือในส่วนนี้คุณต้องอธิบายปัญหาด้วยป้ายกำกับว่า `Convention Suggestion` ในรูปแบบดังนี้
 
-1) explanation of the convention.
-2) explanation on how to implement it.
-3) explanation of why it should be added.
+1) อธิบายแบบแผน
+2) อธิบายเกี่ยวกับวิธีการใช้งาน
+3) อธิบายว่าทำไมจึงควรเพิ่ม
 
-After that, we will discuss it, modify it, then vote on whether to add it or not. If the vote passed you can then submit a pull-request and wait for approval.
+หลังจากนั้นเราจะพูดคุยถกเถียงและโหวตว่าจะเพิ่มหรือไม่ หากการโหวตผ่านคุณสามารถเรียกคำขอและรอการอนุมัติ

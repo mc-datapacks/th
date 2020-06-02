@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Minecraft Datapacks</a></li><li class="chapter-item expanded "><a href="../conventions/index.html"><strong aria-hidden="true">1.</strong> Official Conventions</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../conventions/datapack_advancement.html"><strong aria-hidden="true">1.1.</strong> Datapack Advancement</a></li><li class="chapter-item expanded "><a href="../conventions/custom_model_id.html"><strong aria-hidden="true">1.2.</strong> Custom Model ID</a></li><li class="chapter-item expanded "><a href="../conventions/global_ignoring_tag.html"><strong aria-hidden="true">1.3.</strong> Global Ignoring Tag</a></li><li class="chapter-item expanded "><a href="../conventions/common_trait.html"><strong aria-hidden="true">1.4.</strong> Common Trait Convention</a></li><li class="chapter-item expanded "><a href="../conventions/datapack_uninstallation.html"><strong aria-hidden="true">1.5.</strong> Datapack Uninstallation</a></li><li class="chapter-item expanded "><a href="../conventions/shulker_box_loot_table.html"><strong aria-hidden="true">1.6.</strong> Shulker Box Loot Table</a></li></ol></li><li class="chapter-item expanded "><a href="../certified_datapacks/index.html"><strong aria-hidden="true">2.</strong> Certified Datapacks</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../certified_datapacks/requirement.html"><strong aria-hidden="true">2.1.</strong> Requirement</a></li></ol></li><li class="chapter-item expanded "><a href="../tips/index.html"><strong aria-hidden="true">3.</strong> Tips</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tips/enum_scoreboard.html" class="active"><strong aria-hidden="true">3.1.</strong> Enum Scoreboard</a></li><li class="chapter-item expanded "><a href="../tips/shulker_box_inventory_manipulation.html"><strong aria-hidden="true">3.2.</strong> Shulker Box Inventory Manipulation</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">ไมน์คราฟต์ ดาต้าแพค TH</a></li><li class="chapter-item expanded "><a href="../conventions/index.html"><strong aria-hidden="true">1.</strong> แบบแผนทางการ</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../conventions/datapack_advancement.html"><strong aria-hidden="true">1.1.</strong> แอดวานซ์เม้นท์ ดาต้าแพค</a></li><li class="chapter-item expanded "><a href="../conventions/custom_model_id.html"><strong aria-hidden="true">1.2.</strong> ไอดีโมเดลกำหนดเอง</a></li><li class="chapter-item expanded "><a href="../conventions/global_ignoring_tag.html"><strong aria-hidden="true">1.3.</strong> แท็กยกเว้นสากล</a></li><li class="chapter-item expanded "><a href="../conventions/common_trait.html"><strong aria-hidden="true">1.4.</strong> แบบแผนลักษณะร่วมกัน</a></li><li class="chapter-item expanded "><a href="../conventions/datapack_uninstallation.html"><strong aria-hidden="true">1.5.</strong> ถอนการติดตั้งดาต้าแพค</a></li><li class="chapter-item expanded "><a href="../conventions/shulker_box_loot_table.html"><strong aria-hidden="true">1.6.</strong> Shulker Box Loot Table</a></li></ol></li><li class="chapter-item expanded "><a href="../certified_datapacks/index.html"><strong aria-hidden="true">2.</strong> ดาต้าแพคผ่านการรับรอง</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../certified_datapacks/requirement.html"><strong aria-hidden="true">2.1.</strong> ต้องการอะไรบ้าง</a></li></ol></li><li class="chapter-item expanded "><a href="../tips/index.html"><strong aria-hidden="true">3.</strong> เคล็ดลับ</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tips/enum_scoreboard.html" class="active"><strong aria-hidden="true">3.1.</strong> Enum Scoreboard</a></li><li class="chapter-item expanded "><a href="../tips/shulker_box_inventory_manipulation.html"><strong aria-hidden="true">3.2.</strong> จัดการช่องเก็บของของผู้เล่นด้วย Shulker Box</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -148,19 +148,19 @@
                 <div id="content" class="content">
                     <main>
                         <h1><a class="header" href="#enum-scoreboard" id="enum-scoreboard">Enum Scoreboard</a></h1>
-<p>You can use a fake player to represent a state of your scoreboard instead of using the number directly. This makes your code more verbose and increases maintainability for the future.</p>
-<h2><a class="header" href="#declaring-enum" id="declaring-enum">Declaring enum</a></h2>
+<p>คุณสามารถใช้ Fake player ในการเก็บค่าอะไรบางอย่างใน scoreboard ได้ แทนการใช้ตัวเลขโดยตรงในเงื่อนไข มันจะทำให้โค๊ดของคุณดูละเอียดมากขึ้น บอกหน้าที่ได้มากขึ้น และเพิ่มความสามารถในการปรับปรุงแก้ไขซ่อมแซมโค๊ดได้ง่ายในอนาคต</p>
+<h2><a class="header" href="#ประกาศตัวแปร-enum" id="ประกาศตัวแปร-enum">ประกาศตัวแปร Enum</a></h2>
 <pre><code>scoreboard players set #state.idle bb.enum 1
 scoreboard players set #state.foo bb.enum 2
 scoreboard players set #state.bar bb.enum 3
 </code></pre>
-<p>The enum can hold any value that you want as long as it's unique, we only care about the existence of the fake player itself.</p>
-<h2><a class="header" href="#using-enum-state" id="using-enum-state">Using enum state</a></h2>
+<p>Enum สามารถเก็บค่าใดๆที่คุณต้องการได้ ไม่ว่าจะเป็น ค่าคงที่บางอย่าง หรือ ค่าที่ใช้ครั้งเดียวแล้ว reset รับค่าใหม่เพราะมีการรับค่าตรวจสอบและเปลี่ยนแปลงตลอดเวลา ซึ่งการใช้งานนี้เรารู้อยู่แล้วว่า Fake player ใช้งานอะไรและมันมีอยู่ตลอดเวลา แล้วแต่จะนำไปใช่ มันจะหายไปก็ต่อเมื่อมีการ reset และเซ็ตกลับมาใหม่ได้ จะสังเกตเห็นว่า # Fakeplayer จะไม่โชว์ขึ้นมาที่ sidebar เพราะเป็นการใช้งานเฉพาะที่ซ่อนอยู่เบื้องหลัง</p>
+<h2><a class="header" href="#ตัวอยาง-ใช-enum-เชค-state" id="ตัวอยาง-ใช-enum-เชค-state">ตัวอย่าง ใช้ Enum เช็ค State</a></h2>
 <pre><code>execute if score @s bb.state = #state.idle bb.enum run function &lt;idle_state&gt;
 execute if score @s bb.state = #state.running bb.enum run function &lt;running_state&gt;
 execute if score @s bb.state = #state.stopping bb.enum run function &lt;stopping_state&gt;
 </code></pre>
-<p>Here we check the state of <code>@s</code> and run appropriate function that must only be run in that state.</p>
+<p>วิธีนี้ทำให้เราตรวจสอบ สถานะค่าบางอย่างของ <code>@s</code> ได้ เมื่อตรงตามเงื่อนไขเราก็ทำให้มันเรียกทำงาน function เฉพาะของเหตุการณ์นั้นได้</p>
 
                     </main>
 

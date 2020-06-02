@@ -1,12 +1,12 @@
-# Requirement
+# Requirement (ต้องการอะไรบ้าง)
 
-Datapack must satisfy these requirements to receive Certified Datapack title
+ก่อนทำตามแบบแผนทางการเช็คคุณสมบัติดังนี้ เพื่อให้แน่ใจว่า ดาต้าแพคของคุณต้องการการรับรองจากคอมมิวนิตี้ ซึ่งดาต้าแพคของคุณต้องตรงกับข้อตกลงเหล่านี้เพื่อรับการรับรอง (เป็นกฎในการคัดกรองเล็กๆน้อยๆนะครับ)
 
-- Datapack must be portable, it must not be tied down to a specific save.
-- Datapack must use mcfunction directly. For example, using mcfunction to create a custom recipe does not count.
-- Datapack must modify or add features to Minecraft.
+- ดาต้าแพคต้องย้ายได้ หมายถึงเล่นได้ทุกโลกทุกเซฟ (ไม่ใช่ใช้ได้เฉพาะโลกใดโลกหนึ่ง บางกรณีคุณเพิ่ม Scoreboard ด้วยการพิมพ์คำสั่งแล้วดาต้าแพคคุณใช้ Scoreboard นั้นแต่คุณไม่ได้ใส่มันลงในไฟล์ดาต้าแพคเพื่อให้ดาต้าแพคของคุณสามารถเพิ่ม scoreboard ที่โลกไหนก็ได้ นี่คือตัวอย่างของการย้ายไปเล่นที่เซฟอื่นๆ)
+- ดาต้าแพคต้องใช้ mcfunction โดยตรง ตัวอย่างเช่นการใช้ mcfunction เพื่อเพิ่มสูตรคราฟอันนี้ไม่นับในการตรวจ (นี่ไม่ได้หมายความว่าคุณจะไม่สามารถใช้ไฟล์ Advancement หรือ Loot table นะ ใช้ได้ตามปกติ ไม่ใช่มาแบบแค่เพิ่ม Advancement หรือ เพิ่มการดรอปของ ของม็อบอย่างเดียวแบบนี้ไม่เอาเขาไม่ตรวจนะครับ)
+- ดาต้าแพคต้องมีการแก้ไขดัดแปลงหรือเพิ่มคุณสมบัติหรือการกระทำพิเศษใดๆให้กับเกมไมน์คราฟต์
 
-## Note
+## หมายเหตุ
 
-1. We may rule a datapack out at our discretion, for reasons we would then specify.
-2. This requirement is not final and can be changed in the future.
+1. การตั้งกฎเหล่านี้ออกมาขึ้นอยู่กับดุลยพินิจและเหตุผลของทางคอมมิวนิตี้
+2. ความต้องการแต่ละข้อยังไม่สิ้นสุด ซึ่งสามารถเพิ่มหรือเปลี่ยนแปลงได้ในอนาคต

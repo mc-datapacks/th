@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Datapack Advancement - MC Datapacks</title>
+        <title>แอดวานซ์เม้นท์ ดาต้าแพค - MC Datapacks</title>
         
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Minecraft Datapacks</a></li><li class="chapter-item expanded "><a href="../conventions/index.html"><strong aria-hidden="true">1.</strong> Official Conventions</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../conventions/datapack_advancement.html" class="active"><strong aria-hidden="true">1.1.</strong> Datapack Advancement</a></li><li class="chapter-item expanded "><a href="../conventions/custom_model_id.html"><strong aria-hidden="true">1.2.</strong> Custom Model ID</a></li><li class="chapter-item expanded "><a href="../conventions/global_ignoring_tag.html"><strong aria-hidden="true">1.3.</strong> Global Ignoring Tag</a></li><li class="chapter-item expanded "><a href="../conventions/common_trait.html"><strong aria-hidden="true">1.4.</strong> Common Trait Convention</a></li><li class="chapter-item expanded "><a href="../conventions/datapack_uninstallation.html"><strong aria-hidden="true">1.5.</strong> Datapack Uninstallation</a></li><li class="chapter-item expanded "><a href="../conventions/shulker_box_loot_table.html"><strong aria-hidden="true">1.6.</strong> Shulker Box Loot Table</a></li></ol></li><li class="chapter-item expanded "><a href="../certified_datapacks/index.html"><strong aria-hidden="true">2.</strong> Certified Datapacks</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../certified_datapacks/requirement.html"><strong aria-hidden="true">2.1.</strong> Requirement</a></li></ol></li><li class="chapter-item expanded "><a href="../tips/index.html"><strong aria-hidden="true">3.</strong> Tips</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tips/enum_scoreboard.html"><strong aria-hidden="true">3.1.</strong> Enum Scoreboard</a></li><li class="chapter-item expanded "><a href="../tips/shulker_box_inventory_manipulation.html"><strong aria-hidden="true">3.2.</strong> Shulker Box Inventory Manipulation</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">ไมน์คราฟต์ ดาต้าแพค TH</a></li><li class="chapter-item expanded "><a href="../conventions/index.html"><strong aria-hidden="true">1.</strong> แบบแผนทางการ</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../conventions/datapack_advancement.html" class="active"><strong aria-hidden="true">1.1.</strong> แอดวานซ์เม้นท์ ดาต้าแพค</a></li><li class="chapter-item expanded "><a href="../conventions/custom_model_id.html"><strong aria-hidden="true">1.2.</strong> ไอดีโมเดลกำหนดเอง</a></li><li class="chapter-item expanded "><a href="../conventions/global_ignoring_tag.html"><strong aria-hidden="true">1.3.</strong> แท็กยกเว้นสากล</a></li><li class="chapter-item expanded "><a href="../conventions/common_trait.html"><strong aria-hidden="true">1.4.</strong> แบบแผนลักษณะร่วมกัน</a></li><li class="chapter-item expanded "><a href="../conventions/datapack_uninstallation.html"><strong aria-hidden="true">1.5.</strong> ถอนการติดตั้งดาต้าแพค</a></li><li class="chapter-item expanded "><a href="../conventions/shulker_box_loot_table.html"><strong aria-hidden="true">1.6.</strong> Shulker Box Loot Table</a></li></ol></li><li class="chapter-item expanded "><a href="../certified_datapacks/index.html"><strong aria-hidden="true">2.</strong> ดาต้าแพคผ่านการรับรอง</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../certified_datapacks/requirement.html"><strong aria-hidden="true">2.1.</strong> ต้องการอะไรบ้าง</a></li></ol></li><li class="chapter-item expanded "><a href="../tips/index.html"><strong aria-hidden="true">3.</strong> เคล็ดลับ</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tips/enum_scoreboard.html"><strong aria-hidden="true">3.1.</strong> Enum Scoreboard</a></li><li class="chapter-item expanded "><a href="../tips/shulker_box_inventory_manipulation.html"><strong aria-hidden="true">3.2.</strong> จัดการช่องเก็บของของผู้เล่นด้วย Shulker Box</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -147,12 +147,12 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#datapack-advancement-convention" id="datapack-advancement-convention">Datapack Advancement Convention</a></h1>
-<h2><a class="header" href="#about" id="about">About</a></h2>
-<p>This convention aims to generalize the installation message of datapacks. This is done by using the <a href="https://minecraft.gamepedia.com/Advancements">Advancement</a> tab to display installation message branching from the root advancement to datapack creator to the datapack itself.</p>
-<p>The convention is split into 3 sections: <code>Root</code>, <code>Namespace</code> and <code>Datapack</code></p>
+                        <h1><a class="header" href="#datapack-advancement-convention-แบบแผนแอดวานซเมนทดาตาแพค" id="datapack-advancement-convention-แบบแผนแอดวานซเมนทดาตาแพค">Datapack Advancement Convention (แบบแผนแอดวานซ์เม้นท์ดาต้าแพค)</a></h1>
+<h2><a class="header" href="#คืออะไร" id="คืออะไร">คืออะไร</a></h2>
+<p>ข้อนี้มีวัตถุประสงค์เพื่อแจ้งข้อความการติดตั้งดาต้าแพค ซึ่งทำได้โดยการใช้แท็บ <a href="https://minecraft.gamepedia.com/Advancements">Advancement</a> ในการแสดงผลแท็บการติดตั้งจาก root advancement แล้วโยงออกมาเป็นผู้สร้างดาต้าแพคแล้วต่อด้วยดาต้าแพคที่ผู้สร้างเขียน</p>
+<p>แบบแผนนี้แบ่งออกเป็น 3 ส่วน: <code>Root</code>, <code>Namespace</code> และ <code>Datapack</code></p>
 <h2><a class="header" href="#1-root-advancement" id="1-root-advancement">1. Root Advancement</a></h2>
-<p>This is the advancement that every datapacks will branch off from. This advancement <strong>must</strong> be located at <code>/data/global/advancements/root.json</code> file.</p>
+<p>นี่คือจุดเริ่มต้น Advancement ของทุกๆดาต้าแพคที่จะแยกสายออกมาจากข้อนี้ ไฟล์ Advancement นี้จะ <strong>ต้อง</strong> อยู่ที่ไฟล์ <code>/data/global/advancements/root.json</code> (สีพื้นหลังปัจจุบันที่ใช้คือ gray_concrete)</p>
 <pre><code class="language-json">{
     &quot;display&quot;: {
         &quot;title&quot;: &quot;Installed Datapacks&quot;,
@@ -172,7 +172,7 @@
 }
 </code></pre>
 <h2><a class="header" href="#2-namespace-advancement" id="2-namespace-advancement">2. Namespace Advancement</a></h2>
-<p>This is the advancement is for <em>each</em> datapack creator, it should be the same for all of <em>your</em> datapacks. It <strong>should</strong> be located at <code>/data/global/advancement/&lt;namespace&gt;.json</code>.</p>
+<p>นี่คือ Advancement <em>หัวของ</em>ผู้สร้างแต่ละดาต้าแพค ซึ่งทุกๆของ<em>คุณ</em>ดาต้าแพคจะเหมือนกันหมด ซึ่งมัน <strong>ควร</strong> อยู่ที่ไฟล์ <code>/data/global/advancement/&lt;namespace&gt;.json</code>.</p>
 <pre><code class="language-json">{
     &quot;display&quot;: {
         &quot;title&quot;: &quot;&lt;Your name&gt;&quot;,
@@ -193,7 +193,7 @@
 }
 </code></pre>
 <h2><a class="header" href="#3-datapack-advancement" id="3-datapack-advancement">3. Datapack Advancement</a></h2>
-<p>This is an advancement for <em>your</em> datapack, it should be unique from your other Datapack Advancements. You can create this advancement anywhere as long as you don't pollute <code>/data/global/advancements/</code> folder.</p>
+<p>นี่คือ Advancement สำหรับดาต้าแพคของ<em>คุณ</em>มันควรอยู่เดี่ยวๆจากดาต้าแพคอื่นๆ (แต่ไม่ได้บังคับเพราะบางทีคุณอาจจะต้องการบอกข้อมูลดาต้าแพคนั้นมากกว่า 1 อย่างเช่น EstMapUtility) คุณสามารถสร้างมันที่ไหนก็ได้ แต่ไม่ใช่ที่ โฟลเดอร์ <code>/data/global/advancements/</code> ซึ่งผมแนะนำว่า <code>/data/namespace/advancement/datapack_name/&lt;datapack_name&gt;.json</code></p>
 <pre><code class="language-json">{
     &quot;display&quot;: {
         &quot;title&quot;: &quot;&lt;datapack name&gt;&quot;,
@@ -212,10 +212,10 @@
     }
 }
 </code></pre>
-<h3><a class="header" href="#note" id="note">Note</a></h3>
-<p>everything encased inside <code>&lt;...&gt;</code> should be changed to the specified information.</p>
-<h2><a class="header" href="#result" id="result">Result</a></h2>
-<p>Your advancement tab should now look something like this:</p>
+<h3><a class="header" href="#หมายเหตุ" id="หมายเหตุ">หมายเหตุ</a></h3>
+<p>ทุกอย่างที่อยู่ใน <code>&lt;...&gt;</code> ควรเปลี่ยนเป็นข้อมูลตามที่เขียนระบุไว้</p>
+<h2><a class="header" href="#ผลลัพธ" id="ผลลัพธ">ผลลัพธ์</a></h2>
+<p>แท็บ Advancement ของคุณในตอนนี้มันควรจะเป็นแบบนี้ดังภาพ:</p>
 <p><img src="https://i.imgur.com/6bzBBr1.png" alt="Datapack Advancement Convention Preview" /><br />
 (Image by @Hashs#9531)</p>
 

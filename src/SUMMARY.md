@@ -1,18 +1,18 @@
-# Summary
+# สรุป
 
-[Minecraft Datapacks](./index.md)
+[ไมน์คราฟต์ ดาต้าแพค TH](./index.md)
 
-- [Official Conventions](./conventions/index.md)
-  - [Datapack Advancement](./conventions/datapack_advancement.md)
-  - [Custom Model ID](./conventions/custom_model_id.md)
-  - [Global Ignoring Tag](./conventions/global_ignoring_tag.md)
-  - [Common Trait Convention](./conventions/common_trait.md)
-  - [Datapack Uninstallation](./conventions/datapack_uninstallation.md)
+- [แบบแผนทางการ](./conventions/index.md)
+  - [แอดวานซ์เม้นท์ ดาต้าแพค](./conventions/datapack_advancement.md)
+  - [ไอดีโมเดลกำหนดเอง](./conventions/custom_model_id.md)
+  - [แท็กยกเว้นสากล](./conventions/global_ignoring_tag.md)
+  - [แบบแผนลักษณะร่วมกัน](./conventions/common_trait.md)
+  - [ถอนการติดตั้งดาต้าแพค](./conventions/datapack_uninstallation.md)
   - [Shulker Box Loot Table](./conventions/shulker_box_loot_table.md)
 
-- [Certified Datapacks](./certified_datapacks/index.md)
-  - [Requirement](./certified_datapacks/requirement.md)
+- [ดาต้าแพคผ่านการรับรอง](./certified_datapacks/index.md)
+  - [ต้องการอะไรบ้าง](./certified_datapacks/requirement.md)
 
-- [Tips](./tips/index.md)
+- [เคล็ดลับ](./tips/index.md)
   - [Enum Scoreboard](./tips/enum_scoreboard.md)
-  - [Shulker Box Inventory Manipulation](./tips/shulker_box_inventory_manipulation.md)
+  - [จัดการช่องเก็บของของผู้เล่นด้วย Shulker Box](./tips/shulker_box_inventory_manipulation.md)

@@ -1,3 +1,3 @@
-# Tips
+# เคล็ดลับ
 
-Various tips and tricks for developing datapack.
+เคล็ดลับและลูกเล่นต่างๆเพื่อพัฒนาดาต้าแพคของคุณ

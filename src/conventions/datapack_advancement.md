@@ -1,14 +1,14 @@
-# Datapack Advancement Convention
+# Datapack Advancement Convention (แบบแผนแอดวานซ์เม้นท์ดาต้าแพค)
 
-## About
+## คืออะไร
 
-This convention aims to generalize the installation message of datapacks. This is done by using the [Advancement](https://minecraft.gamepedia.com/Advancements) tab to display installation message branching from the root advancement to datapack creator to the datapack itself.
+ข้อนี้มีวัตถุประสงค์เพื่อแจ้งข้อความการติดตั้งดาต้าแพค ซึ่งทำได้โดยการใช้แท็บ [Advancement](https://minecraft.gamepedia.com/Advancements) ในการแสดงผลแท็บการติดตั้งจาก root advancement แล้วโยงออกมาเป็นผู้สร้างดาต้าแพคแล้วต่อด้วยดาต้าแพคที่ผู้สร้างเขียน
 
-The convention is split into 3 sections: `Root`, `Namespace` and `Datapack`
+แบบแผนนี้แบ่งออกเป็น 3 ส่วน: `Root`, `Namespace` และ `Datapack`
 
 ## 1. Root Advancement
 
-This is the advancement that every datapacks will branch off from. This advancement **must** be located at `/data/global/advancements/root.json` file.
+นี่คือจุดเริ่มต้น Advancement ของทุกๆดาต้าแพคที่จะแยกสายออกมาจากข้อนี้ ไฟล์ Advancement นี้จะ **ต้อง** อยู่ที่ไฟล์ `/data/global/advancements/root.json` (สีพื้นหลังปัจจุบันที่ใช้คือ gray_concrete)
 
 ```json
 {
@@ -32,7 +32,7 @@ This is the advancement that every datapacks will branch off from. This advancem
 
 ## 2. Namespace Advancement
 
-This is the advancement is for *each* datapack creator, it should be the same for all of *your* datapacks. It **should** be located at `/data/global/advancement/<namespace>.json`.
+นี่คือ Advancement *หัวของ*ผู้สร้างแต่ละดาต้าแพค ซึ่งทุกๆของ*คุณ*ดาต้าแพคจะเหมือนกันหมด ซึ่งมัน **ควร** อยู่ที่ไฟล์ `/data/global/advancement/<namespace>.json`.
 
 ```json
 {
@@ -57,7 +57,7 @@ This is the advancement is for *each* datapack creator, it should be the same fo
 
 ## 3. Datapack Advancement
 
-This is an advancement for *your* datapack, it should be unique from your other Datapack Advancements. You can create this advancement anywhere as long as you don't pollute `/data/global/advancements/` folder.
+นี่คือ Advancement สำหรับดาต้าแพคของ*คุณ*มันควรอยู่เดี่ยวๆจากดาต้าแพคอื่นๆ (แต่ไม่ได้บังคับเพราะบางทีคุณอาจจะต้องการบอกข้อมูลดาต้าแพคนั้นมากกว่า 1 อย่างเช่น EstMapUtility) คุณสามารถสร้างมันที่ไหนก็ได้ แต่ไม่ใช่ที่ โฟลเดอร์ `/data/global/advancements/` ซึ่งผมแนะนำว่า `/data/namespace/advancement/datapack_name/<datapack_name>.json`
 
 ```json
 {
@@ -79,13 +79,13 @@ This is an advancement for *your* datapack, it should be unique from your other 
 }
 ```
 
-### Note
+### หมายเหตุ
 
-everything encased inside `<...>` should be changed to the specified information.
+ทุกอย่างที่อยู่ใน `<...>` ควรเปลี่ยนเป็นข้อมูลตามที่เขียนระบุไว้
 
-## Result
+## ผลลัพธ์
 
-Your advancement tab should now look something like this:
+แท็บ Advancement ของคุณในตอนนี้มันควรจะเป็นแบบนี้ดังภาพ:
 
 ![Datapack Advancement Convention Preview](https://i.imgur.com/6bzBBr1.png)  
 (Image by @Hashs#9531)

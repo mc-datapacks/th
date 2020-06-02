@@ -1,14 +1,15 @@
-# Datapack Uninstallation Convention
+# Datapack Uninstallation Convention (แบบแผนเรื่องถอนการติดตั้งดาต้าแพค)
 
-## About
+## คืออะไร
 
-Every datapacks are required to implement a way to "uninstall" theirs datapack from the world.
+ทุกๆดาต้าแพค จำเป็นต้อง มีวิธี "ถอนการติดตั้ง" ดาต้าแพคออกจากโลกไมน์คราฟของผู้เล่น
 
-There is no specific implementation that you need to follow. This convention only enforces that you added some way to uninstall your datapack from the world.
+ไม่ได้มีอะไรสำคัญมากนักที่คุณต้องทำเป็นพิเศษ แบบแผนทางการนี้บังคับว่าคุณต้องเพิ่มวิธีถอนการติดตั้งดาต้าแพคออกจากโลกไมน์คราฟไว้ด้วย
 
-These are some example list of what could be uninstalled from the world
+ตัวอย่างของรายการที่ต้องลบเมื่อมีการถอนการติดตั้งดาต้าแพคออกจากโลกไมน์คราฟ
 
-- Used scoreboards.
-- Custom/Marker entities.
+- ใช้ Scoreboards
+- เอ็นทิตี้ที่สร้างหรือกำหนดขึ้นมาเอง เช่น area_effect_cloud
 - /data storage
-- forceloaded chunks
+- forceloaded chunks (บังคับโหลด chunks)
+- tag (อันนี้แล้วแต่ไม่ได้บังคับ)

@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Shulker Box Inventory Manipulation - MC Datapacks</title>
+        <title>จัดการช่องเก็บของของผู้เล่นด้วย Shulker Box - MC Datapacks</title>
         
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Minecraft Datapacks</a></li><li class="chapter-item expanded "><a href="../conventions/index.html"><strong aria-hidden="true">1.</strong> Official Conventions</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../conventions/datapack_advancement.html"><strong aria-hidden="true">1.1.</strong> Datapack Advancement</a></li><li class="chapter-item expanded "><a href="../conventions/custom_model_id.html"><strong aria-hidden="true">1.2.</strong> Custom Model ID</a></li><li class="chapter-item expanded "><a href="../conventions/global_ignoring_tag.html"><strong aria-hidden="true">1.3.</strong> Global Ignoring Tag</a></li><li class="chapter-item expanded "><a href="../conventions/common_trait.html"><strong aria-hidden="true">1.4.</strong> Common Trait Convention</a></li><li class="chapter-item expanded "><a href="../conventions/datapack_uninstallation.html"><strong aria-hidden="true">1.5.</strong> Datapack Uninstallation</a></li><li class="chapter-item expanded "><a href="../conventions/shulker_box_loot_table.html"><strong aria-hidden="true">1.6.</strong> Shulker Box Loot Table</a></li></ol></li><li class="chapter-item expanded "><a href="../certified_datapacks/index.html"><strong aria-hidden="true">2.</strong> Certified Datapacks</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../certified_datapacks/requirement.html"><strong aria-hidden="true">2.1.</strong> Requirement</a></li></ol></li><li class="chapter-item expanded "><a href="../tips/index.html"><strong aria-hidden="true">3.</strong> Tips</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tips/enum_scoreboard.html"><strong aria-hidden="true">3.1.</strong> Enum Scoreboard</a></li><li class="chapter-item expanded "><a href="../tips/shulker_box_inventory_manipulation.html" class="active"><strong aria-hidden="true">3.2.</strong> Shulker Box Inventory Manipulation</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">ไมน์คราฟต์ ดาต้าแพค TH</a></li><li class="chapter-item expanded "><a href="../conventions/index.html"><strong aria-hidden="true">1.</strong> แบบแผนทางการ</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../conventions/datapack_advancement.html"><strong aria-hidden="true">1.1.</strong> แอดวานซ์เม้นท์ ดาต้าแพค</a></li><li class="chapter-item expanded "><a href="../conventions/custom_model_id.html"><strong aria-hidden="true">1.2.</strong> ไอดีโมเดลกำหนดเอง</a></li><li class="chapter-item expanded "><a href="../conventions/global_ignoring_tag.html"><strong aria-hidden="true">1.3.</strong> แท็กยกเว้นสากล</a></li><li class="chapter-item expanded "><a href="../conventions/common_trait.html"><strong aria-hidden="true">1.4.</strong> แบบแผนลักษณะร่วมกัน</a></li><li class="chapter-item expanded "><a href="../conventions/datapack_uninstallation.html"><strong aria-hidden="true">1.5.</strong> ถอนการติดตั้งดาต้าแพค</a></li><li class="chapter-item expanded "><a href="../conventions/shulker_box_loot_table.html"><strong aria-hidden="true">1.6.</strong> Shulker Box Loot Table</a></li></ol></li><li class="chapter-item expanded "><a href="../certified_datapacks/index.html"><strong aria-hidden="true">2.</strong> ดาต้าแพคผ่านการรับรอง</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../certified_datapacks/requirement.html"><strong aria-hidden="true">2.1.</strong> ต้องการอะไรบ้าง</a></li></ol></li><li class="chapter-item expanded "><a href="../tips/index.html"><strong aria-hidden="true">3.</strong> เคล็ดลับ</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tips/enum_scoreboard.html"><strong aria-hidden="true">3.1.</strong> Enum Scoreboard</a></li><li class="chapter-item expanded "><a href="../tips/shulker_box_inventory_manipulation.html" class="active"><strong aria-hidden="true">3.2.</strong> จัดการช่องเก็บของของผู้เล่นด้วย Shulker Box</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -147,26 +147,26 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#shulker-box-inventory-manipulation" id="shulker-box-inventory-manipulation">Shulker Box Inventory Manipulation</a></h1>
-<h2><a class="header" href="#about" id="about">About</a></h2>
-<p>This technique allows us to manipulate the player's inventory just like any NBT using the shulker box's loot table.</p>
-<h2><a class="header" href="#concept" id="concept">Concept</a></h2>
-<p>We take advantage of the fact that the shulker box can be configured to drop their content on the ground instead of a shulker box containing its content, which can then be used by <code>/loot</code> command to replace the player's inventory.</p>
-<h2><a class="header" href="#implementation" id="implementation">Implementation</a></h2>
-<p>1. To follow with the <a href="/conventions/index.html">Official Conventions</a> you will have to modify the loot table of <code>minecraft:yellow_shulker_box</code> to the loot table below. The loot table will drop its content on the ground when it's mined by an item with NBT <code>{drop_contents: 1b}</code><br />
+                        <h1><a class="header" href="#จัดการชองเกบของของผูเลนดวย-shulker-box" id="จัดการชองเกบของของผูเลนดวย-shulker-box">จัดการช่องเก็บของของผู้เล่นด้วย Shulker Box</a></h1>
+<h2><a class="header" href="#คืออะไร" id="คืออะไร">คืออะไร</a></h2>
+<p>นี่คือเทคนิคติดตามเพื่อจัดการกับช่องเก็บของของผู้เล่น เพียงแค่ใช้ระบบ loot table ของ NBT Block entity Data Shulker Box </p>
+<h2><a class="header" href="#หลักการ" id="หลักการ">หลักการ</a></h2>
+<p>ราใช้ประโยชน์จากข้อเท็จจริงที่ว่า Shulker Box สามารถทำให้มันดรอปของในกล่องบนพื้นได้แทนที่จะเป็นตัวกล่องที่มีไอเทมอยู่ข้างในซึ่งแนวคิดนี้สามารถใช้ คำสั่ง <code>/loot</code> เพื่อแทนที่หรือแก้ไขช่องเก็บของของผู้เล่นได้</p>
+<h2><a class="header" href="#การใชงานคราวๆ" id="การใชงานคราวๆ">การใช้งานคร่าวๆ</a></h2>
+<p>1. ในการปฏิบัติตาม <a href="/conventions/index.html">แบบแผน ทางการ</a> คุณต้องแก้ไข Loot table ของ <code>minecraft:yellow_shulker_box</code> ให้เป็น Loot table ตามที่เขียนไว้ Loot table ดังกล่าวจะนำ ไอเทมออกจาก Shulker Box โดยไม่ติด Shulker Box มาด้วยมีแค่ไอเทมจาก Shulker Box เท่านั้น เมื่อมีการขุดโดยอุปกรณ์ที่มี NBT <code>{drop_contents: 1b}</code><br />
 <a href="https://pastebin.com/4sspBvep"><center>https://pastebin.com/4sspBvep</center></a></p>
-<p>2. Create a placeholder shulker box that you will use to modify the player's inventory. Usually, this should be placed far away from player view but for simplicity's sake. I'll place it at <code>~ ~ ~</code>.</p>
+<p>2. สร้างกล่อง Shulker Box เฉพาะขึ้นมาเพื่อจัดการช่องเก็บของของผู้เล่น โดยปกติมันกล่องจะวางห่างจากสายตาของผู้เล่น หรือในพื้นที่ๆไม่มีการใช้งาน โดยปกติทำกันที่ <code>~ 255 ~</code> จากพิกัดของผู้เล่นหรือ เอ็นทิตี้ใดๆ แต่เพื่อเป็นตัวอย่างจึงขอใช้ <code>~ ~ ~</code></p>
 <pre><code>setblock ~ ~ ~ minecraft:yellow_shulker_box
 </code></pre>
-<p>3. You need to clone the player's inventory into some sort of NBT buffer, you can clone this into a data storage since they are faster.</p>
+<p>3. ให้โคลนหรือก็อปปี้ช่องเก็บของของผู้เล่น ลงใน NBT บางอย่าง คุณสามารถโคลนมันไปไว้ที่ storage ได้เนื่องจากมันเร็วกว่า</p>
 <pre><code>data modify storage &lt;storage&gt; inventory set from entity &lt;player&gt; Inventory
 </code></pre>
-<p>4. Due to a limited number of slots inside the shulker box, You have to process the nbt in &quot;batch&quot; the easiest way to organize this batch can be done by splitting it into &quot;hotbar&quot;, &quot;inventory&quot;, &quot;armor&quot; and &quot;offhand&quot; batch.
+<p>4. เนื่องจากจำนวนช่องที่จำกัดใน Shulker Box ทำให้มันไม่พอใช้กับจำนวนช่องเก็บของของผู้เล่น คุณต้องทำมันใน &quot;batch&quot; ซึ่งเป็นวิธีที่ง่ายที่สุดในการจัดการให้ตามลำดับทำได้โดยแยกมันออกมาเป็น &quot;hotbar&quot;, &quot;inventory&quot;, &quot;armor&quot; and &quot;offhand&quot; batch.
 <!-- - "hotbar" batch will contain items from slot 0 to 8 -->
 <!-- - "inventory" batch will contain items from slot 9 to 35 -->
 <!-- - "armor" batch will contain items from slot 100 to 103 -->
 <!-- - "offhand" btach will contain items from slot -106 (with the negative sign) --></p>
-<p>4.1. Create each batch using these commands.</p>
+<p>4.1. สร้าง batch บางอย่างด้วยคำสังประมาณนี้ ตัวอย่าง</p>
 <pre><code>                                      |--- Batch name                                     |---- Slot number
 data modify storage &lt;storage&gt; batch.hotbar append from storage &lt;storage&gt; inventory[{Slot: 0b}]
 data modify storage &lt;storage&gt; batch.hotbar append from storage &lt;storage&gt; inventory[{Slot: 1b}]
@@ -175,11 +175,11 @@ data modify storage &lt;storage&gt; batch.hotbar append from storage &lt;storage
 .
 .
 
-// Don't forget to remove `Slot` nbt from the item before moving to the next step!
+// อย่างลืมลบ `Slot` nbt ออกจาก ไอเทม ก่อนที่จะไปทำขั้นตอนต่อไป!
 data remove storage &lt;storage&gt; batch.hotbar[].Slot
 </code></pre>
-<p>4.2. Modify the NBT of each item however you like it to be.</p>
-<p>5. Copy the nbt from the previous step into the shulker box and then replace the player's inventory.</p>
+<p>4.2. แก้ไข NBT ของแต่ละไอเทมที่คุณต้องการ</p>
+<p>5. คัดลอก nbt จากขั้นตอนก่อนหน้าลงใน Shulker Box แล้วแทนที่ไอเทมเข้าไปยังช่องเก็บของของผู้เล่น</p>
 <pre><code>data modify block ~ ~ ~ Items set from storage &lt;storage&gt; batch.hotbar
 loot replace entity &lt;player&gt; hotbar.0 9 mine ~ ~ ~ iron_pickaxe{drop_contents: 1b}
 
@@ -192,14 +192,14 @@ loot replace entity &lt;player&gt; armor.feet 4 mine ~ ~ ~ iron_pickaxe{drop_con
 data modify block ~ ~ ~ Items set from storage &lt;storage&gt; batch.offhand
 loot replace entity &lt;player&gt; weapon.offhand 1 mine ~ ~ ~ iron_pickaxe{drop_contents: 1b}
 </code></pre>
-<p>Note: Notice the slots I used in each <code>/loot</code> command?</p>
-<p>6. Cleaning up</p>
+<p>หมายเหตุ: อย่าลืมสังเกตดู Slot และก็ประเภทให้ตรงกันด้วยนะ</p>
+<p>6. เก็บกวาดหลังใช้งานเสร็จ</p>
 <pre><code>setblock ~ ~ ~ minecraft:air
 data remove storage &lt;storage&gt; batch
 data remove storage &lt;storage&gt; inventory
 </code></pre>
-<h2><a class="header" href="#note" id="note">Note</a></h2>
-<p>In this example, I assume that you need to modify NBT of all available slots but if you want to modify only items in your hotbar then you don't need to use &quot;inventory&quot;, &quot;armor&quot; and &quot;offhand&quot; batch.</p>
+<h2><a class="header" href="#หมายเหตุ" id="หมายเหตุ">หมายเหตุ</a></h2>
+<p>ในตัวอย่างเหล่านี้คิดว่าคุณต้องแก้ไข NBT ของ Slot ทั้งหมด แต่ถ้าคุณแก้ไขไอเทมช่อง Hotbar อย่างเดียว mainhand อย่างเดียว คุณไม่ต้องใช้ &quot;inventory&quot;, &quot;armor&quot; and &quot;offhand&quot; batch.</p>
 
                     </main>
 

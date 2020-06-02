@@ -1,24 +1,24 @@
 # Common Trait Convention
 
-## About
+## คืออะไร
 
-This convention intended to bring the Ore Dictionary system from [Forge](http://files.minecraftforge.net/) to datapack's custom item. This is done by utilizing Item's custom nbt feature. We can insert any kind of nbt inside item which we can use other commands to check/look into it.
+แบบแผนนี้มีวัตถุประสงค์เพื่อนำระบบ Ore Dictionary จาก [Forge](http://files.minecraftforge.net/) ไปยังไอเทมกำหนดเองของดาต้าแพค ทำได้โดยใช้คุณสมบัติ NBT ที่กำหนดเองของไอเทม เราสามารถใส่ NBT ภายในไอเทมใดก็ได้ที่เราสามารถใช้คำสั่งอื่นๆเพื่อเช็คหรือดูข้อมูลภายในของมันได้
 
-With that, we can create a unified lookup system that every datapacks can use to search for a specific item they want. You can then use the Common Trait Convention's provided syntax to construct a search function to find the item you need.
+โดยสิ่งนี้เราสามารถสร้างระบบการค้นหาแบบรวมที่ดาต้าแพคทุกอันสามารถใช้เพื่อหาไอเทมเฉพาะที่ต้องการ ซึ่งคุณสามารถใช้ syntax ที่ใส่ไว้ใน Common Trait Convention เพื่อสร้างฟังก์ชั่นเพื่อหาไอเทมที่คุณต้องการได้
 
-### Example Usage
+### ตัวอย่างการใช้งาน
 
-It can be hard to visualize how this convention would be useful in the real world, so we compile some useful usage that would not be possible without this convention.
+มันยากที่จะจินตนาการว่าแบบแผนนี้จะใช้ประโยชน์ในโลกจริงได้อย่างไร เราจึงรวบรวมการใช้งานที่มีประโยชน์ ซึ่งจะไม่สามารถทำได้หากไม่ทำตามแบบแผนที่ว่าเหล่านี้
 
-1. Suppose you added a `custom furnace` which let you smelt copper ore into ingots. With this convention, you can detect for **any** copper ore from any datapacks to smelt it.
-2. Suppose you added a `fridge` which only accept food items, with this convention you can detect for **any** food items even the custom ones from other datapack.
-3. Suppose you added a `custom anvil` which lets you repair tools straight from the material instead of the ingot, with this convention you can detect **any** kind of material from other datapacks even when the base material doesn't match.
+1. สมมติว่าเราเพิ่ม `custom furnace` โดยคุณอยากจะหลอมแร่ทองแดงให้เป็นทองแดงแท่ง ด้วยแบบแผนนี้ คุณสามารถตรวจสอบแร่ทองแดง **ใดๆก็ได้** ก็ได้จากดาต้าแพคอื่นๆเพื่อหลอมมัน (สรุปก็คือ หากดาต้าแพคของคุณมีเตาเผาที่สร้างขึ้นมาเองหรือกำหนดเอง เมื่อทำตามแบบแผนนี้มันจะทำให้เตาเผาของคุณหลอมแร่ทองแดงจากทั่วทุกสารทิศที่เพิ่มเข้ามาจากดาต้าแพคของคนอื่นหรืออาจจะรวมไปถึงแร่ของม็อดด้วย)
+2. สมมติว่าดาต้าแพคของคุณเพิ่ม `fridge ตู้เย็น` ที่รับเฉพาะไอเทมอาหารด้วยแบบแผนนี้คุณสามารถตรวจหาไอเทมอาหาร **ใดๆก็ได้** แม้แต่ไอเทมอาหารที่ถูกสร้างขึ้นมาเองจากดาต้าแพคอื่นๆได้
+3. สมมติว่าดาต้าแพคของคุณได้เพิ่ม `custom anvil` ที่ทำให้คุณซ่อมของได้โดยตรงจากไอเทมที่ทดแทนกันได้แทนที่จะเป็นแร่เหล็ก เพชร ทอง เป็นต้น ด้วยแบบแผนนี้ คุณสามารถตรวจจับไอเทมวัสดุทดแทน **ใดๆก็ได้** จากดาต้าแพคอื่นๆแม้วัสดุของไอเทมจะไม่ตรงกัน (สรุปก็คือ ถ้าคุณจะซ่อมดาบเหล็กสักเล่ม คุณต้องใช้แร่เหล็ก แต่เมื่อมีแบบแผนนี้ `custom anvil` ของคุณก็สามารถใช้แร่ที่ทดแทนเหล็กได้ อลูมิเนียม ไทเทเนี่ยม และอื่นๆถ้าในเกมมี)
 
 ### Traits
 
-Traits are behavior and properties that an object can have. By specifying these traits inside the item's nbt. Other datapacks will be able to refer to that item via traits instead of item id directly.
+Traits คือ อัตลักษณ์และคุณสมบัติที่ไอเทมสามารถมีได้ โดยการระบุคุณสมบัติพวกนี้ลงใน NBT ของไอเทม ดาต้าแพคอื่นๆจะสามารถอ้างอิงไอเทมนั้นๆผ่าน Traits แทนการใช้ ID ได้โดยตรง
 
-Trait is an array of strings and so will look like this in nbt (notice `traits: [...]`?)
+Trait เป็น อาร์เรย์ของสตริงและมีลักษณะแบบนี้ใน nbt (notice `traits: [...]`?)
 
 ```mcfunction
 /give @s diamond{ctc: {traits: ["some", "trait", "here"], id: "example", from: "convention:wiki"}}
@@ -26,13 +26,13 @@ Trait is an array of strings and so will look like this in nbt (notice `traits: 
 
 ### Syntax
 
-Common Trait Convention's syntax will be stored inside `ctc` nbt of item. inside`ctc` contains: `id`, `from` and `traits` nbts.
+Syntax ของ Common Trait Convention จะเก็บอยู่ข้างใน `ctc` ของ nbt ไอเทม ภายใน`ctc` จะบรรจุข้อมูล: `id`, `from` และ `traits` nbts.ไว้
 
-- `id`: internal id of your item, this should not be used outside of your datapack but should be unique within your datapack.
-- `from`: a namespace specifying which datapack is the item comes from.
-- `traits`: an array of traits that you can use to refer to items outside of your datapack.
+- `id`: ไอดีจะอยู่ภายในของไอเทมของคุณซึ่งมันไม่ควรใช้ภายนอกดาต้าแพคของคุณ และต้องไม่ซ้ำกันถายในดาต้าแพคที่คุณเขียน
+- `from`: เป็นชื่อของคุณหรือ namespace ที่ระบุว่าไอเทมนั้นมาจากดาต้าแพคอะไร
+- `traits`: เป็นอาร์เรย์ของ traits ที่คุณสามารถใช้เพื่ออ้างอิงไอเทมจากดาต้าแพคภายนอกได้
 
-We will assume the following syntax is the NBT structure of `/give` command
+เราจะสมมติว่า syntax ดังต่อไปนี้เป็นโครงสร้าง NBT ของ คำสั่ง `/give`
 
 ```text
 {
@@ -44,151 +44,151 @@ We will assume the following syntax is the NBT structure of `/give` command
 }
 ```
 
-Let's look at `traits` nbt
+ลองดูที่ `traits` nbt
 
-- `metal/copper`, this trait tells us that this item is copper.
-- `block`, this trait tells us that this item is a placeable block.
-- `ore`, this trait tells us that this item is an ore.
+- `metal/copper`, trait traits นี้บอกเราว่าไอเทมนี้เป็นทองแดง
+- `block`, trait นี้บอกเราว่าไอเทมนี้เป็นบล็อกที่สามารถวางได้
+- `ore`, trait นี้บอกเราว่าไอเทมนี้เป็นแร่
 
-#### Slash Notation
+#### เครื่องหมายสแลช
 
-In the above example, you will notice the use of `/` in `metal/copper`, this is used when the trait alone can be ambiguous. For example, what does trait `orange` mean? is it the *color* orange or the *fruit* orange?
+ในตัวอย่างจะเห็นว่ามีการใช้ `/` ใน `metal/copper`, ซึ่งจะใช้ก็ต่อเมื่อ trait (ลักษณะ)ของวัตถุไม่สามารถระบุได้เพียง 1 อย่าง เช่น ลักษณะพิเศษของ `orange` (ส้ม) หมายถึงอะไรได้บ้างมันเป็น *สี* ส้มหรือ *ส้ม* ที่เป็นผลไม้
 
-In such case we'll use slash notation to separate them. `color/orange` and `fruit/orange`
+ซึ่งเราจะใช้ เครื่องหมายสแลช เพื่อแยกประเภทเหล่านี้ให้ออก `color/orange` และ `fruit/orange`
 
-## Usage
+## การนำไปใช้
 
-To detect or check for trait items you just need to check for `traits` nbt of the item.
+ในการตรวจจับหรือเช็คคุณสมบัติบางอย่างคุณเพียงแค่ตรวจสอบ `traits` nbt ของไอเทม
 
-> Detect if the player is holding a weapon
+> ตรวจจับว่าผู้เล่นถืออาวุธหรือไม่
 
 ```mcfunction
 execute as @a if entity @s SelectedItem.tag.ctc{traits: ["tool/weapon"]} run ...
 ```
 
-> Detect if the container contains copper ore
+> ตรวจจับว่าภายในบล็อคเก็บของมีแร่ทองแดง
 
 ```mcfunction
 execute if block ~ ~ ~ Items[].tag.ctc{traits: ["metal/copper", "ore"]} run ...
 ```
 
-> Detect if the container contains a placeable item
+> ตรวจจับว่าภายในบล็อคเก็บของมีไอเทมที่วางได้
 
 ```mcfunction
 execute if block ~ ~ ~ Items[].tag.ctc{traits: ["block"]} run ...
 ```
 
-## Basic Traits
+## ลักษณะพื้นฐาน
 
-This is a provided list of traits that you can use, this doesn't mean you can't create new traits for your own use but if there is a trait that suits your need in this you should use it instead.
+นี่คือลักษณะของไอเทมที่คุณสามารถใช้ได้ แต่มันไม่ได้หมายความว่าคุณไม่สามารถสร้างคุณลักษณะหรืออัตลักษณ์ใหม่สำหรับการใช้งานของคุณเอง แต่ถ้าคุณสมบัติของไอเทมที่เราระบุในตารางเหล่านี้เหมาะสมกับความต้องการของคุณ คุณก็ใช้มันแทนได้เลย
 
-> The list is split into multiple groups and you **should not** use traits from the same group twice.
+> ลิสต์ถูกแบ่งออกเป็นหลายกลุ่มและคุณ **ไม่ควร** ใช้ traits จากกลุ่มเดียวกันสองครั้ง
 
-### Object Type Group
+### กลุ่มของประเภทวัตถุ
 
-This trait represents the state of matter that this item holds.
+trait แสดงเกี่ยวกับไอเทมที่ถืออยู่
 
-|Trait|Description|
+|Trait|คำอธิบาย|
 |-----|-----------|
-|gas|Gaseous substance|
-|liquid|Liquid substance|
-|block|Placeable item|
-|item|Normal minecraft item|
+|gas|สารที่เป็นก๊าช|
+|liquid|ของเหลว|
+|block|ไอเทมที่วางได้|
+|item|ไอเทมปกติในไมน์คราฟต์|
 
-### Special Type Group
+### กลุ่มของประเภทพิเศษ
 
-This trait represents common behavior from modded minecraft, this should help with integrating your pack into this convention.
+นี่คือ traits ทั่วไปของไมน์คราฟต์ม็อด ซึ่งจะช่วยให้ดาต้าแพคของคุณรวบรวมไอเทมที่ใช้กับดาต้าแพคของคุณทั้งหมดได้ด้วยแบบแผนนี้
 
-> This group is an exception to the rule above, you can use multiple traits from this group as much as you like.
+> กลุ่มนี้เป็นข้อยกเว้นของกฎข้างต้นคุณสามารถใช้ traits หลายอย่างจากกลุ่มนี้ได้มากเท่าที่คุณต้องการ
 
-|Trait|Description|
+|Trait|คำอธิบาย|
 |-----|-----------|
-|ore|Ore block that can usually be found in cave|
-|seed|Item that can be used to grow plant|
-|flower|Flower item|
-|grass|Block that can spread from one block to another|
-|sapling|Block that can grow into tree|
-|vegetable|Food item that comes from `seed`|
-|log|Item that drops from tree|
-|planks|Item that come from processing `log`|
+|ore|บล็อกแร่ที่สามารถหาเจอได้จากถ้ำ|
+|seed|ไอเทมที่ใช้ปลูกโตเป็นฟืชได้|
+|flower|ไอเทมดอกไม้|
+|grass|บล็อกที่สามารถแพร่กระจายจากบล็อกนึงไปยังอีกบล็อกนึงได้|
+|sapling|บล็อกที่โตเป็นต้นไม้ได้|
+|vegetable|ไอเทมอาหารจาก `seed`|
+|log|ไอเทมที่ดรอปจากต้นไม้|
+|planks|ไอเทมที่ได้จากการแปรรูปไม้ `log`|
 
-### Compression Group
+### กลุ่มบีบอัด
 
-This trait represents an item that can be combined to create a more compact version of itself and vice versa
+traits นี้แสดงถึงไอเทมที่สามารถคราฟรวมกันให้บีบอัดอยู่ใน 1 ไอเทมได้ และ คราฟกลับออกมาแยกส่วนได้
 
-For example:
+ตัวอย่างเช่น:
 
 - `redstone dust` -> `redstone block`
 - `ice` -> `packed ice`
 - `iron block` -> `iron ingot`
 
-|Trait|Description|
+|Trait|คำอธิบาย|
 |-----|-----------|
-|packed|Most packed form of item, usually be a block form of this item|
-|ingot|Normal form of item, usually be an ingot form of this item|
-|nugget|Smallest form of item, usually be a nugget form of this item|
+|packed|รูปแบบอัดแน่นที่สุดของไอเทม, ซึ่งปกติจะอยู่ในรูปของบล็อก|
+|ingot|รูปแบบปกติของไอเทม, ซึ่งปกติจะอยู่ในรูปของแท่งแร่|
+|nugget|รูปแบบไอเทมที่เล็กสุด, ซึ่งปกติจะอยู่ในรูปของนักเก็ต|
 
-### Edible Group
+### กลุ่มที่กินได้
 
-This trait represents an edible item that can be used by the player (drinking included)
+traits นี้แสดงถึงไอเทมที่ผู้เล่นสามารถกินได้ (รวมไปถึงเครื่องดื่ม)
 
-|Trait|Description|
+|Trait|คำอธิบาย|
 |-----|-----------|
-|food|All types of edible item|
+|food|ไอเทมที่กินได้ทุกประเภท|
 
-### Armor Group
+### กลุ่มชุดเกราะ
 
-This trait represents an item that can be worn by players and other entities
+traits นี้แสดงถึงไอเทมที่ผู้เล่นหรือเอ็นทิตี้อื่นๆสามารถสวมใส่ได้
 
-|Trait|Description|
+|Trait|คำอธิบาย|
 |-----|-----------|
-|armor|All types of wearable item|
+|armor|ไอเทมที่สวมใส่ได้ทุกประเภท|
 
-### Tool Sub-group
+### กลุ่มแยกย่อยของเครื่องมือ
 
-> This trait use [Slash Notation](#slash-notation)!
+> นี้ trait ใช้ [เครื่องหมายสแลช](#เครื่องหมายสแลช)!
 
-This trait represents an item that can be used to interact with the world.
+traits นี้แสดงถึงไอเทม ที่สามารถใช้กับโลกได้
 
-|Trait|Description|
+|Trait|คำอธิบาย|
 |-----|-----------|
-|tool/mining|This item can be used to mine a stone block and other related blocks|
-|tool/chopping|This item can be used to cut trees and wood material|
-|tool/tilling|This item can be used to till the soil|
-|tool/watering|This item can be used to water the soil|
-|tool/weapon|This item can be used to fight monsters and other players|
+|tool/mining|ไอเทมนี้สามารถใช้ขุดบล็อกหรือบล็อกอื่นๆที่เกี่ยวข้อง|
+|tool/chopping|ไอเทมนี้สามารถใช้ตัดไม้และวัสดุไม้|
+|tool/tilling|ไอเทมนี้สามารถใช้ไถพรวนดิน|
+|tool/watering|ไอเทมนี้สามารถใช้รดน้ำได้|
+|tool/weapon|ไอเทมนี้สามารถใช้สู้กับมอนสเตอร์แลพผู้เล่นอื่น|
 
-### Gem Sub-group
+### กลุ่มย่อยของมณี
 
-> This trait use [Slash Notation](#slash-notation)!
+> นี้ trait ใช้ [เครื่องหมายสแลช](#เครื่องหมายสแลช)!
 
-This trait represents an item that can be considered "gemstone"
+traits นี้แสดงถึงไอเทมที่เป็น "เพชรพลอย"
 
-|Trait|Description|
+|Trait|คำอธิบาย|
 |-----|-----------|
 |gem/diamond|Diamond gemstone|
 |gem/ruby|Ruby gemstone|
 |gem/emerald|Emerald gemstone|
 |gem/saphire|Saphire gemstone|
 
-### Metal Sub-group
+### กลุ่มย่อยของโลหะ
 
-> This trait use [Slash Notation](#slash-notation)!
+> นี้ trait ใช้ [เครื่องหมายสแลช](#เครื่องหมายสแลช)!
 
-This trait represents the metallic items that are often added by mods
+traits นี้แสดงถึงไอเทม ที่มักถูกเพิ่มโดยม็อด
 
-|Trait|Description|
+|Trait|คำอธิบาย|
 |-----|-----------|
-|metal/iron|Item that made up of iron|
-|metal/gold|Item that made up of gold|
-|metal/copper|Item that made up of copper|
-|metal/aluminium|Item that made up of aluminium|
-|metal/tin|Item that made up of tin|
-|metal/silver|Item that made up of silver|
-|metal/lead|Item that made up of lead|
-|metal/nickle|Item that made up of nickle|
-|metal/platinum|Item that made up of platinum|
+|metal/iron|ไอเทมที่ทำจากเหล็ก|
+|metal/gold|ไอเทมที่ทำจากทอง|
+|metal/copper|ไอเทมที่ทำจากทอดงแดง|
+|metal/aluminium|ไอเทมที่ทำจากอลูมิเนียม|
+|metal/tin|ไอเทมที่ทำจากดีบุก|
+|metal/silver|ไอเทมที่ทำจากเงิน|
+|metal/lead|ไอเทมที่ทำจากตะกัว|
+|metal/nickle|ไอเทมที่ทำจากนิคเกิล|
+|metal/platinum|ไอเทมที่ทำจากทองคำขาว|
 
-## Reference
+## อ้างอิง
 
 - [Ore Dict](https://paleocrafter-mcforge.readthedocs.io/en/fix-mkdoc-update/utilities/oredictionary/)

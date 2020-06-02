@@ -1,3 +1,3 @@
-# Official Conventions
+# แบบแผนทางการ
 
-These are official conventions that everyone **must** followed for datapack compatibility.
+แบบแผนทางการที่ทุกคน **ควร** ปฎิบัติตามเพื่อความเข้ากันได้ของดาต้าแพค
