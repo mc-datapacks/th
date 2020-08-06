@@ -1,4 +1,4 @@
-# Common Trait แบบแผน
+# Common Trait แบบแผน (`**`)
 
 ## คืออะไร
 
@@ -6,7 +6,7 @@
 
 โดยสิ่งนี้เราสามารถสร้างระบบการค้นหาแบบรวมที่ดาต้าแพคทุกอันสามารถใช้เพื่อหาไอเทมเฉพาะที่ต้องการ ซึ่งคุณสามารถใช้ syntax ที่ใส่ไว้ใน Common Trait Convention เพื่อสร้างฟังก์ชั่นเพื่อหาไอเทมที่คุณต้องการได้
 
-### ตัวอย่างการใช้งาน
+### การใช้งาน
 
 มันยากที่จะจินตนาการว่าแบบแผนนี้จะใช้ประโยชน์ในโลกจริงได้อย่างไร เราจึงรวบรวมการใช้งานที่มีประโยชน์ ซึ่งจะไม่สามารถทำได้หากไม่ทำตามแบบแผนที่ว่าเหล่านี้
 
@@ -21,7 +21,7 @@ Traits คือ อัตลักษณ์และคุณสมบัติ
 Trait เป็น อาร์เรย์ของสตริงและมี trait แบบนี้ใน nbt (notice `traits: [...]`?)
 
 ```mcfunction
-/give @s diamond{ctc: {traits: ["some", "trait", "here"], id: "example", from: "convention:wiki"}}
+/give @s diamond{ctc: {traits: {"some": 1b, "trait": 1b, "here": 1b}, id: "example", from: "convention:wiki"}}
 ```
 
 ### Syntax
@@ -39,10 +39,13 @@ Syntax ของ Common Trait Convention จะเก็บอยู่ข้า
     ctc: {
         id: "my_copper_ore",
         from: "convention:wiki",
-        traits: ["metal/copper", "block", "ore"]
+        traits: {"metal/copper": 1b, "block": 1b, "ore": 1b}
     }
 }
 ```
+
+> เกมไม่มีการ `เซ็ต` ประเภทข้อมูล ดังนั้นเราเลยใช้การผสมแท็กแบบซ้ำ
+> ซึ่งหมายความว่าทุก trait ต้องมีค่า `1b` หรือ `true` เพื่อให้สอดคล้องกัน.
 
 ลองดูที่ `traits` nbt
 
@@ -63,20 +66,34 @@ Syntax ของ Common Trait Convention จะเก็บอยู่ข้า
 > ตรวจจับว่าผู้เล่นถืออาวุธหรือไม่
 
 ```mcfunction
-execute as @a if entity @s SelectedItem.tag.ctc{traits: ["tool/weapon"]} run ...
+execute as @a if entity @s SelectedItem.tag.ctc.traits."tool/weapon" run ...
+
+คำสั่งนี้เช็คผู้เล่นว่ามีการถือไอเทมที่มีข้อมูล trait `tool/weapon`
+
+---
 ```
 
 > ตรวจจับว่าภายในบล็อคเก็บของมีแร่ทองแดง
 
 ```mcfunction
-execute if block ~ ~ ~ Items[].tag.ctc{traits: ["metal/copper", "ore"]} run ...
+execute if block ~ ~ ~ Items[].tag.ctc.traits{"metal/copper": 1b, "ore": 1b} run ...
+
+คำสั่งนี้เช็คกล่องบางอย่างว่าเก็บไอเทมที่มีข้อมูล traits `metal/copper` and `ore` อยู่ภายใน
+
+---
 ```
 
 > ตรวจจับว่าภายในบล็อคเก็บของมีไอเทมที่วางได้
 
 ```mcfunction
-execute if block ~ ~ ~ Items[].tag.ctc{traits: ["block"]} run ...
+execute if block ~ ~ ~ Items[].tag.ctc.traits."block" run ...
 ```
+
+คำสั่งนี้เช็คไอเทมบางอย่างว่ามีการเก็บข้อมูล traits `block` ซึ่งแสดงว่าบล็อคดังกล่าวนั้นวางได้
+
+---
+
+> แม้ว่าเครื่องหมาย "" รอบๆ trait นั้นไม่จำเป็นในบางกรณี, แต่ฉันใส่มันไว้เพื่อความสอดคล้องที่ครอบคลุม.
 
 ## trait พื้นฐาน
 
