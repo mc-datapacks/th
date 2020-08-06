@@ -3,16 +3,16 @@
 [Minecraft Datapacks TH](./index.md)
 
 - [แบบแผนทางการ](./conventions/index.md)
-  - [แอดวานซ์เมนต์ ดาต้าแพค*](./conventions/datapack_advancement.md)
-  - [ถอนการติดตั้ง ดาต้าแพค*](./conventions/datapack_uninstallation.md)
+  - [แอดวานซ์เมนต์ ดาต้าแพ็ค*](./conventions/datapack_advancement.md)
+  - [ถอนการติดตั้ง ดาต้าแพ็ค*](./conventions/datapack_uninstallation.md)
   - [Common Trait แบบแผน**](./conventions/common_trait.md)
   - [ไอดีโมเดลกำหนดเอง***](./conventions/custom_model_id.md)
   - [แท็กยกเว้นสากล***](./conventions/global_ignoring_tag.md)  
-  - [Global Durability*](./conventions/global_durability.md)
-  - [แบบแผนเนมเสปช**](./conventions/namespace.md)
+  - [ค่าความทนทานสากล*](./conventions/global_durability.md)
+  - [แบบแผนเนมสเปช**](./conventions/namespace.md)
   - [Shulker Box Loot Table***](./conventions/shulker_box_loot_table.md)
 
-- [ดาต้าแพคผ่านการรับรอง](./certified_datapacks/index.md)
+- [ดาต้าแพ็คผ่านการรับรอง](./certified_datapacks/index.md)
   - [ต้องการอะไรบ้าง](./certified_datapacks/requirement.md)
 
 - [เคล็ดลับ](./tips/index.md)
