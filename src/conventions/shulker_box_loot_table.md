@@ -1,10 +1,10 @@
-# Shulker Box Loot Table แบบแผน
+# Shulker Box Loot Table แบบแผน (`***`)
 
-## คืออะไร
+## เกี่ยวกับ
 
 แบบแผนนี้มีวัตถุประสงค์เพื่อสร้างระบบ [จัดการช่องเก็บของของผู่เล่นด้วย Shulker Box](../tips/shulker_box_inventory_manipulation.md) เพื่อไม่ให้เกิดการชนกันภายในระบบ โดยการบังคับใช้ loot table สำหรับบล็อก `minecraft:yellow_shulker_box` โดยเฉพาะ
 
-## โดยปฏิบัติดังต่อไปนี้
+## การใช้งาน
 
 เพียงแค่สร้าง loot table ที่ `/data/minecraft/loot_tables/blocks/yellow_shulker_box.json` เมื่อคุณต้องการใช้เคล็ดลับการ [จัดการช่องเก็บของของผู้เล่น](../tips/shulker_box_inventory_manipulation.md) 
 
