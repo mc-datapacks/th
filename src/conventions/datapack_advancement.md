@@ -46,7 +46,7 @@
 
 นี่คือ Advancement หัวของผู้สร้าง (player_head) แต่ละดาต้าแพ็ค 
 
-ซึ่งทุกๆของคุณดาต้าแพ็คจะเหมือนกันหมด ซึ่งมัน **ต้อง** อยู่ที่ไฟล์ `/data/global/advancement/<namespace>.json`.
+ซึ่งทุกๆดาต้าแพ็คของคุณจะเหมือนกันหมด ซึ่งมัน **ต้อง** อยู่ที่ไฟล์ `/data/global/advancement/<namespace>.json`.
 
 ```json
 {
@@ -81,7 +81,7 @@
 
 ![](./advancement/datapack.png)
 
-คุณสามารถสร้างมันที่ไหนก็ได้ แต่ไม่ใช่ที่ โฟลเดอร์ `/data/global/advancements/folder` ซึ่งผมแนะนำว่า `/data/namespace/advancement/datapack_name/<datapack_name>.json`
+คุณสามารถสร้างมันที่ไหนก็ได้ แต่ไม่ใช่ที่ โฟลเดอร์ `/data/global/advancements/folder` ซึ่งผมแนะนำว่า `/data/namespace/advancement/<datapack_name>.json`
 
 ```json
 {
