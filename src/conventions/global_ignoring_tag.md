@@ -8,33 +8,27 @@
 
 ### 1. `global.ignore.kill`
 
-เอ็นทิตี้ใดๆทีมีเจ้าแท็กนี้อยู่ **จะต้องไม่** ถูก ฆ่า โดยดาต้าแพ็คอื่นๆ แต่ไม่ได้จำกัดใช้แค่ /kill นะ
+เอ็นทิตี้ใดๆทีมีเจ้าแท็กนี้อยู่ **จะต้องไม่** ถูก ฆ่า โดยดาต้าแพ็คอื่นๆ แต่ไม่ได้จำกัดใช้แค่ `/kill` นะ
 ```mcfunction
-execute as @e[type=creeper, tag=!global.ignore.kill] run kill @s
 execute as @e[type=creeper, tag=!global.ignore, tag=!global.ignore.kill] run kill @s
 kill @e[type=creeper, tag=!global.ignore, tag=!global.ignore.kill]
 ```
-สามารถใช้คู่กับ tag=!global.ignore ได้
 
 ### 2. `global.ignore.gui`
 
-เอ็นทิตี้ใดๆที่มีแท็กนี้ **จะต้องไม่** แสดงผลเอฟเฟกต์ใดๆที่รอบๆเอ็นทิตี้นี้เลย แต่ไม่ได้จำกัดใช้แค่ /title, /particle, /playsound นะ
+เอ็นทิตี้ใดๆที่มีแท็กนี้ **จะต้องไม่** แสดงผลเอฟเฟกต์ใดๆที่รอบๆเอ็นทิตี้นี้เลย แต่ไม่ได้จำกัดใช้แค่ `/title` นะ
 ```mcfunction
 execute as @a[tag=!global.ignore.gui] at @s run title @s actionbar [{"text": "Hello, World!", "color": "green"}]
-tellraw @a[tag=!global.ignore,tag=!global.ignore.gui] {"text":"Hello, World!","color":"green"}
-execute as @a[tag=!global.ignore,tag=!global.ignore.gui] at @s run particle end_rod ~ ~ ~ 0 0 0 .01 0 normal
-execute as @a[tag=!global.ignore,tag=!global.ignore.gui] at @s run playsound block.note_block.pling master @s ~ ~ ~ 2.5 1 1
 ```
-สามารถใช้คู่กับ tag=!global.ignore ได้
+> ข้อนี้ยกเว้นกับคำสั่ง `/playsound`, `/tellraw` และ `/particle`
 
 ### 3. `global.ignore.pos`
 
-เอ็นทิตี้ใดๆที่มีแท็กนี้ **จะต้องไม่** ถูกเคลื่อนย้าย จากจุดที่มันอยู่แม้แต่นิดเดียว แต่ไม่ได้จำกัดใช้แค่ /tp, /teleport นะ
+เอ็นทิตี้ใดๆที่มีแท็กนี้ **จะต้องไม่** ถูกเคลื่อนย้าย จากจุดที่มันอยู่แม้แต่นิดเดียว แต่ไม่ได้จำกัดใช้แค่ `/tp`, `/teleport` นะ
 ```mcfunction
-execute as @e[type=witch, tag=!global.ignore.pos] at @s run tp @s ~ ~0.1 ~
+execute as @e[type=witch, tag=!global.ignore, tag=!global.ignore.pos] at @s run tp @s ~ ~0.1 ~
 tp @e[type=area_effect_cloud, tag=!global.ignore, tag=!global.ignore.pos] ~ ~0.1 ~
 ```
-สามารถใช้คู่กับ tag=!global.ignore ได้
 
 ### 4. `global.ignore`
 
@@ -42,10 +36,8 @@ tp @e[type=area_effect_cloud, tag=!global.ignore, tag=!global.ignore.pos] ~ ~0.1
 ```mcfunction
 execute as @e[tag=!global.ignore] at @s run function namespace:internal/logic/function
 ```
-แต่อย่าลืมว่ายังไงมันก็ต้องใส่ให้ครบอยู่ดีนะครับ เพราะคนอื่นที่เขียนเขาอาจไม่ได้ใช้แท็กรวมนะครับ
-```mcfunction
-tellraw @a[tag=!global.ignore,tag=!global.ignore.gui] {"text":"[EstPortallinkCalc Uninstalled]","color":"red"}
-```
+
+> แท็กนี้ไม่สามารถใช้กับ selector สำหรับผู้เล่นเท่านั้นได้ (`@a`, `@e[type=player]`, `@p`, เป็นต้น.)  
 
 ## หมายเหตุ
 
