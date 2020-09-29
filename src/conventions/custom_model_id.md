@@ -8,7 +8,7 @@
 
 "id" คือเลขจำนวนเต็ม (Integer) ระหว่าง 1-999 ซึ่งเราจะใช้ namespaced custom model data เฉพาะเจาะจง เพื่อป้องกันการตีกันของ Resource packs  [resourcepacks](https://minecraft.gamepedia.com/Resource_pack).
 
-คุณสามารถลงทะเบียนไอดีของคุณได้ที่นี่ [https://mc-datapacks.web.app](https://mc-datapacks.web.app/custom_model_id).
+คุณสามารถลงทะเบียนไอดีของคุณได้ที่นี่ [https://mcdatapacks.vercel.app/](https://mcdatapacks.vercel.app/).
 
 ## 2. ใส่เลขด้านหน้าเลขโมเดลของคุณด้วยไอดีของคุณ
 
